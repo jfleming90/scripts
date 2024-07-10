@@ -1,0 +1,18 @@
+// Enter Flows between Nodes, like this:
+//         Source [AMOUNT] Target
+//---Process Workflow---
+
+Day 1 [10] Phase 1
+
+Phase 1 [3] Create VM's.terraform
+Phase 1 [1] CreateVPC.ps1
+Phase 1 [1] Create Database.ps1
+Phase 1 [1] Create Cloud Storage.ps1
+
+CreateVPC.ps1 [1] CreateSGs.ps1
+CreateSGs.ps1 [1] Assign Servers to SGs
+
+Create VM's.terraform [1] Deploy File server.ps1
+Create VM's.terraform [1] Deploy Engines.ps1
+Create VM's.terraform [1] Deploy Workstations.ps1
+
